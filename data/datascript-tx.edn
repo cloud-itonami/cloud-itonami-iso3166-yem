@@ -1,0 +1,75 @@
+;; data/datascript-tx.edn — DataScript tx-data derived from src/statute/facts.cljc
+;; `statute.facts/catalog` (ADR-2607141700 Wave 0). Same shape as sibling files.
+
+[#:statute{:id "yem.tenders-auctions-warehouses-law-23-2007"
+           :title "Law Concerning Tenders, Auctions and Government Warehouses (قانون المناقصات والمزايدات والمخازن الحكومية), establishing the Supreme Authority for Oversight of Tenders and Auctions (الهيئة العليا للرقابة على المناقصات والمزايدات)"
+           :jurisdiction "YEM"
+           :kind :law
+           :law-number "Law No. 23 of 2007 (repealed prior Law No. 3 of 1997)"
+           :url "https://www.yemen-nic.info/db/laws_ye/detail.php?ID=15594"
+           :url-provenance :official-yemen-nic-info-legislation-database
+           :enacted-date "2007-08-14"
+           :retrieved-at "2026-07-23"
+           :topic [:public-procurement :market-entry]}
+ #:statute{:id "yem.decree-law-33-1991-commercial-registry"
+           :title "Republican Decree-Law Concerning the Commercial Registry, as amended (القرار الجمهوري بالقانون بشأن السجل التجاري المعدل)"
+           :jurisdiction "YEM"
+           :kind :decree
+           :law-number "Decree-Law No. 33 of 1991 (repealed prior Sana'a Law No. 12/1976 and Aden Law No. 14/1969)"
+           :url "https://www.moit.gov.ye/legislations/laws"
+           :url-provenance :official-moit-gov-ye-legislation-library-sanaa-authority
+           :enacted-date "1991-04-13"
+           :retrieved-at "2026-07-23"
+           :topic [:market-entry :corporate-governance :incorporation]}
+ #:statute{:id "yem.law-22-1997-commercial-companies"
+           :title "Commercial Companies Law, as amended by Law No. 28 of 2004 (قانون الشركات التجارية وتعديلاته)"
+           :jurisdiction "YEM"
+           :kind :law
+           :law-number "Law No. 22 of 1997, as amended by Law No. 28 of 2004"
+           :url "https://www.moit.gov.ye/legislations/laws"
+           :url-provenance :official-moit-gov-ye-legislation-library-sanaa-authority
+           :enacted-date "1997-04-06"
+           :retrieved-at "2026-07-23"
+           :topic [:company-law :corporate-governance]}
+ #:statute{:id "yem.decree-law-5-1995-labor-law"
+           :title "Labor Law, as amended by Laws No. 25/1997, No. 11/2001, No. 25/2003 (قانون العمل وتعديلاته)"
+           :jurisdiction "YEM"
+           :kind :decree
+           :law-number "Republican Decree-Law No. 5 of 1995, as amended by Laws No. 25/1997, No. 11/2001, No. 25/2003"
+           :url "https://www.yemen-nic.info/db/laws_ye/detail.php?ID=11439"
+           :url-provenance :official-yemen-nic-info-legislation-database
+           :enacted-date "1995-03-09"
+           :last-revised-date "2003-03-05"
+           :retrieved-at "2026-07-23"
+           :topic [:labor :market-entry]}
+ #:statute{:id "yem.law-19-2001-general-sales-tax"
+           :title "General Sales Tax Law, as amended by Laws No. 36/2002 and No. 14/2004 (قانون الضريبة العامة على المبيعات وتعديلاته)"
+           :jurisdiction "YEM"
+           :kind :law
+           :law-number "Law No. 19 of 2001, as amended by Law No. 36 of 2002 and Law No. 14 of 2004"
+           :url "https://www.yemen-nic.info/db/laws_ye/detail.php?ID=11733"
+           :url-provenance :official-yemen-nic-info-legislation-database
+           :enacted-date "2001-12-31"
+           :last-revised-date "2004-06-30"
+           :retrieved-at "2026-07-23"
+           :topic [:tax]}
+ #:statute{:id "yem.law-22-2002-investment-law"
+           :title "Investment Law (قانون الاستثمار), establishing the General Investment Authority (الهيئة العامة للاستثمار / GIA) -- the pre-2014-split, still-standing founding statute of Yemen's national investment regime"
+           :jurisdiction "YEM"
+           :kind :law
+           :law-number "Law No. 22 of 2002 (itself superseding earlier Law No. 22 of 1991 as amended by Decree-Law No. 14 of 1995)"
+           :url "https://www.yemen-nic.info/db/laws_ye/detail.php?ID=11773"
+           :url-provenance :official-yemen-nic-info-legislation-database
+           :enacted-date "2002-07-20"
+           :retrieved-at "2026-07-23"
+           :topic [:foreign-investment :tax]}
+ #:statute{:id "yem.law-3-1446-2025-investment-law-contested"
+           :title "'Investment Law 2025' (قانون الاستثمار 2025) -- CONTESTED: issued via the Sana'a-based Ministry of Economy, Industry and Investment's own legislative process (State Legal Bureau), not confirmed recognized by the internationally-recognized government (IRG, seat in Aden); see catalog docstring disclosure. Only a webpage-level summary was read this session, NOT the full ~20MB PDF text -- no article-level provision from this specific law is asserted anywhere in this repository"
+           :jurisdiction "YEM"
+           :kind :law
+           :law-number "Law No. 3 of 1446H (2025)"
+           :url "https://www.moit.gov.ye/Investment-Law"
+           :url-provenance :official-moit-gov-ye-sanaa-authority-contested-legitimacy-webpage-summary-only
+           :enacted-date "2025-01-05"
+           :retrieved-at "2026-07-23"
+           :topic [:foreign-investment]}]

@@ -3,7 +3,48 @@
  :itonami.blueprint/iso3166 "YEM"
  :itonami.blueprint/domain :public-sector/market-entry-compliance
  :itonami.blueprint/license "AGPL-3.0-or-later"
+ :itonami.blueprint/social-impact [:yemeni-sme-market-access :public-spend-transparency :yemenization-labor-quota-compliance]
  :itonami.blueprint/governor :market-entry-compliance-governor
  :itonami.blueprint/robotics false
  :itonami.blueprint/required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
- :itonami.blueprint/status :public-oss}
+ :itonami.blueprint/status :public-oss
+ :itonami.blueprint/maturity :implemented
+ :itonami.blueprint/implemented-slice
+ "MarketEntry-LLM Advisor ⊣ Market-Entry Compliance Governor, a REAL
+ compiled `kotoba-lang/langgraph` StateGraph (`:intake -> :advise ->
+ :govern -> :decide -+-> :commit / :request-approval -> :commit /
+ :hold`), append-only audit ledger. Seven governor checks, in priority
+ order, ALL HARD violations a human approver cannot override:
+ spec-basis citation, evidence-checklist completeness, non-Yemeni
+ workforce quota exceeded (`:requires-foreign-worker-hiring?` /
+ `:non-yemeni-worker-count` / `:yemeni-worker-count`, the FLAGSHIP
+ check for this jurisdiction, grounded in Article 21 of Yemen's Labor
+ Law No. 5/1995 (as amended) -- a foreign employer's non-Yemeni
+ workforce may not exceed 10% of its Yemeni workforce, independently
+ recomputed from the engagement's own declared headcounts, never
+ trusted from a claimed ratio), independent engagement-fee recompute
+ (base + months x rate), Commercial-Registry-unverified
+ (`:requires-cr?`/`:cr-verified?`, grounded in Decree-Law No. 33/1991
+ Art. 11), double-draft guard, double-submit guard, plus a SOFT
+ confidence-floor/actuation gate. `:filing/draft` and `:filing/submit`
+ (real government-tender actuation) never auto-commit in any phase;
+ `interrupt-before #{:request-approval}` pauses escalated requests for
+ real human sign-off via a checkpointer, and BOTH `:commit` and
+ `:hold` durably append to the real audit ledger
+ (`store/append-ledger!`). Store has a `MemStore` and a `DatomicStore`
+ (via `kotoba-lang/langchain-store`, no hand-rolled EDN-blob codec),
+ proven equivalent by a shared store-contract test. `statute.facts`
+ additionally carries 7 Yemen laws (Tenders/Auctions/Government-
+ Warehouses Law No. 23/2007, Commercial Registry Decree-Law No.
+ 33/1991, Commercial Companies Law No. 22/1997, Labor Law No. 5/1995,
+ General Sales Tax Law No. 19/2001, Investment Law No. 22/2002, and a
+ separately-flagged CONTESTED 2025 'Investment Law' issued only via
+ the Sana'a-based de facto authorities) confirmed this session against
+ yemen-nic.info (pre-2014-split legislation database) and moit.gov.ye
+ (Sana'a-authority ministry PDF library) -- ILO NATLEX was excluded
+ after returning a genuine Cloudflare bot-detection challenge (never
+ bypassed), Yemen's General Investment Authority (gia.gov.ye) was
+ found to be a parked placeholder page (not a functioning site), and
+ no income-tax law citation could be confirmed (Ministry of Finance
+ site unreachable) -- all disclosed as honest gaps in
+ `docs/business-model.md`, not silently papered over."}
