@@ -3,7 +3,7 @@
 **`:implemented`** for **YEM** (Yemen). Flagship `non-yemeni-workforce-quota-exceeded`, secondary `cr-unverified`.
 
 ```
-clojure -M:dev:test
+kbb -M:dev:test
 ```
 
 AGPL-3.0-or-later.
