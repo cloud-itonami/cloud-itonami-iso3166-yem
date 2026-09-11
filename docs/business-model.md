@@ -103,7 +103,7 @@ that fragmentation rather than assuming it from memory:
   للدولة" (State Legal Bureau), a legislative mechanism specific to
   the Houthi/Sana'a authorities. Whether/how this 2025 law is
   recognized outside Houthi-controlled territory was NOT confirmed
-  this session — it is catalogued in `src/statute/facts.cljc` WITH
+  this session — it is catalogued in `src/statute/facts.cljk` WITH
   this caveat attached (`:statute/url-provenance
   :official-moit-gov-ye-sanaa-authority-contested-legitimacy-webpage-summary-only`),
   never presented as uncontested national law. Only a webpage-level
